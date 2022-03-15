@@ -5,8 +5,8 @@ const [
   INTERVIEW_RESULT_ANNOUNCED_KST_DATE, // 최종 합격 발표
   AFTER_FIRST_SEMINAR_JOIN_KST_DATE, // 첫번째 세미나 끝나는 시각
 ] = [
-  new Date('2022-03-16T00:00:00+09:00'),
-  new Date('2022-03-29T23:59:59+09:00'),
+  new Date('2022-03-02T10:00:00+09:00'),
+  new Date('2022-03-30T00:00:00+09:00'),
   new Date('2022-04-02T10:00:00+09:00'),
   new Date('2022-04-12T10:00:00+09:00'),
   new Date('2022-04-16T17:00:00+09:00'),
