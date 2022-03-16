@@ -4,11 +4,13 @@ import * as Styled from './InAppSignInDialog.styled';
 
 const TARGET_URL = 'https://recruit.mash-up.kr';
 
-const browserNameMap = {
+const browserNameMap: Record<InAppBrowser, string> = {
   KAKAO: '카카오톡',
   FACEBOOK: '페이스북',
   INSTAGRAM: '인스타그램',
   NAVER: '네이버',
+  CAMPUS_PICK: '캠퍼스픽',
+  EVERY_TIME: '에브리타임',
 } as const;
 
 export interface InAppSignInDialogProps {
@@ -21,8 +23,11 @@ const InAppSignInDialog = ({ handleSuccessCopy, handleCloseButton }: InAppSignIn
   const toast = useToast();
   const { copy } = useCopyToClipboard(TARGET_URL, {
     onSuccess: () => {
-      toast({ text: '링크 복사 완료!' });
+      toast({ text: '링크 복사 완료!', status: 'success' });
       handleSuccessCopy();
+    },
+    onError: () => {
+      toast({ text: '링크 복사 실패. 다시 시도해주세요!', status: 'error' });
     },
   });
 

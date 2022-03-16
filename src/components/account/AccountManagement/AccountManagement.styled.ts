@@ -51,7 +51,14 @@ export const InfoList = styled.ul`
 `;
 
 export const InfoListItem = styled.li`
-  width: 100%;
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+
+    @media (max-width: ${theme.breakPoint.media.tabletS}) {
+      display: block;
+    }
+  `}
 `;
 
 export const ItemHeading = styled.span`
