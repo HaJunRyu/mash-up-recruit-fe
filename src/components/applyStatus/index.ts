@@ -5,9 +5,11 @@ export { default as ScreeningWait } from './ScreeningWait/ScreeningWait.componen
 export { default as ScreeningPass } from './ScreeningPass/ScreeningPass.component';
 export { default as ProcessFail } from './ProcessFail/ProcessFail.component';
 export { default as ScreeningFail } from './ScreeningFail/ScreeningFail.component';
-export { default as ScreeningReject } from './ScreeningReject/ScreeningReject.component';
+export { default as InterviewReject } from './InterviewReject/InterviewReject.component';
 export { default as InterviewAccept } from './InterviewAccept/InterviewAccept.component';
 export { default as InterviewPass } from './InterviewPass/InterviewPass.component';
 export { default as InterviewFail } from './InterviewFail/InterviewFail.component';
 export { default as FinalConfirmAccept } from './FinalConfirmAccept/FinalConfirmAccept.component';
 export { default as FinalConfirmReject } from './FinalConfirmReject/FinalConfirmReject.component';
+export { default as ConfirmRejectModalDialog } from './ConfirmRejectModalDialog/ConfirmRejectModalDialog.component';
+export { default as ConfirmAcceptModalDialog } from './ConfirmAcceptModalDialog/ConfirmAcceptModalDialog.component';

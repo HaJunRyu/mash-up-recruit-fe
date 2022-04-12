@@ -8,9 +8,9 @@ const [
   AFTER_FIRST_SEMINAR_JOIN_KST_DATE, // 첫번째 세미나 끝나는 시각
 ] = [
   new Date('2022-03-16T00:00:00+09:00'),
-  new Date('2022-04-02T18:12:00+09:00'),
-  new Date('2022-04-02T18:15:00+09:00'),
-  new Date('2022-04-02T18:20:00+09:00'),
+  new Date('2022-03-29T23:59:59+09:00'),
+  new Date('2022-04-03T10:00:00+09:00'),
+  new Date('2022-04-12T19:00:00+09:00'),
   new Date('2022-04-16T17:00:00+09:00'),
 ];
 
@@ -65,8 +65,8 @@ export const getValueOfDateIntoObj = (dateInstance: Date) => {
   const month = dateInstance.getMonth() + 1;
   const date = dateInstance.getDate();
   const hour24Format = dateInstance.getHours();
-  const isAfternoon = dateInstance.getHours() > 12;
-  const hour12Format = isAfternoon ? hour24Format - 12 : hour24Format;
+  const isAfternoon = dateInstance.getHours() >= 12;
+  const hour12Format = hour24Format > 12 ? hour24Format - 12 : hour24Format;
   const minute = dateInstance.getMinutes().toString().padStart(2, '0');
   const day = dateInstance.getDay();
   const dayKr = DAYS[dateInstance.getDay()];
